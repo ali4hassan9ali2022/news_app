@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/Models/item_model.dart';
+import 'package:news_app/Views/categories_view.dart';
 
 class CategoryCard extends StatelessWidget {
   const CategoryCard({super.key, required this.item});
@@ -7,6 +8,11 @@ class CategoryCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
+      onTap: () {
+        Navigator.push(context, MaterialPageRoute(builder: (context) {
+          return CategoriesView(category: item.categoryName);
+        },));
+      },
       child: Container(
         width: 160,
         height: 85,

@@ -30,11 +30,11 @@ class _NewsListBuilderState extends State<NewsListBuilder> {
           );
         } else if (snapshot.hasError) {
           return const SliverToBoxAdapter(
-            child: Text("There was an Error"),
+            child: Center(child: Text("There was an Error")),
           );
         } else {
           return const SliverToBoxAdapter(
-            child: CircularProgressIndicator(),
+            child: Center(child: CircularProgressIndicator()),
           );
         }
       },

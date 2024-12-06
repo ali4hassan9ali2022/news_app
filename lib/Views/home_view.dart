@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/Widgets/list_card.dart';
-import 'package:news_app/Widgets/news_list.dart';
 import 'package:news_app/Widgets/news_list_builder.dart';
 
 class HomeView extends StatelessWidget {
@@ -42,7 +41,9 @@ class HomeView extends StatelessWidget {
                 height: 16,
               ),
             ),
-            NewsListBuilder(category: "general",),
+            NewsListBuilder(
+              category: "general",
+            ),
           ],
         ),
       ),

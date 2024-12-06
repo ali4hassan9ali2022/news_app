@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:news_app/Models/articles_model.dart';
 import 'package:news_app/Widgets/news_list.dart';
 import 'package:news_app/services/news_services.dart';
 
@@ -20,11 +21,13 @@ class _NewsListBuilderState extends State<NewsListBuilder> {
 
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder(
+    return FutureBuilder<List<ArticlesModel>>(
       future: future,
       builder: (context, snapshot) {
         if (snapshot.hasData) {
-          return const NewsList();
+          return NewsList(
+            articles: snapshot.data!,
+          );
         } else if (snapshot.hasError) {
           return const SliverToBoxAdapter(
             child: Text("There was an Error"),

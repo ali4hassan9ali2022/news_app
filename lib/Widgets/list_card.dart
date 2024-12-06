@@ -5,13 +5,13 @@ import 'package:news_app/Widgets/category_card.dart';
 class ListCard extends StatelessWidget {
   const ListCard({super.key});
   final List<ItemModel> item = const [
-    ItemModel(categoryName: "Business", image: "assets/business.avif"),
-    ItemModel(categoryName: "Entertaiment", image: "assets/entertaiment.avif"),
-    ItemModel(categoryName: "Health", image: "assets/health.avif"),
-    ItemModel(categoryName: "Science", image: "assets/science.avif"),
-    ItemModel(categoryName: "Sports", image: "assets/sports.avif"),
-    ItemModel(categoryName: "Technology", image: "assets/technology.jpeg"),
-    ItemModel(categoryName: "General", image: "assets/general.avif"),
+    ItemModel(categoryName: "business", image: "assets/business.avif"),
+    ItemModel(categoryName: "entertainment", image: "assets/entertaiment.avif"),
+    ItemModel(categoryName: "health", image: "assets/health.avif"),
+    ItemModel(categoryName: "science", image: "assets/science.avif"),
+    ItemModel(categoryName: "sports", image: "assets/sports.avif"),
+    ItemModel(categoryName: "technology", image: "assets/technology.jpeg"),
+    ItemModel(categoryName: "general", image: "assets/general.avif"),
   ];
   @override
   Widget build(BuildContext context) {
